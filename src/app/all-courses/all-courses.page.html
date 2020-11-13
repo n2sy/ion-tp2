@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary"> 
+    <ion-title>Our Catalog</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p class="ion-margin"><strong>We propose these new courses : </strong></p>
+
+  <ion-list>
+    <ion-item [routerLink]="['detail', cours.id]" *ngFor="let cours of myCourses">
+      <ion-avatar>
+        <ion-img [src]="cours.image">
+        </ion-img>
+      </ion-avatar>
+      <ion-label class="ion-margin-horizontal"> {{cours.intitule}} </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

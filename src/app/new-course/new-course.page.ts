@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ListCoursesService } from '../list-courses.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-course',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewCoursePage implements OnInit {
 
-  constructor() { }
+  constructor(private courseServ : ListCoursesService,
+    private router : Router) { }
 
   ngOnInit() {
+  }
+
+  createNewCourse(newCourse) {
+    newCourse.keywords = newCourse.keywords.split(";");
+    this.courseServ.addCourse(newCourse);
+    this.router.navigateByUrl("/all");
+    
+
+
   }
 
 }

@@ -1,5 +1,10 @@
 <ion-header>
   <ion-toolbar color="primary"> 
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-menu-button menu="m1"></ion-menu-button>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Our Catalog</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="goToNewCourse()">
@@ -10,6 +15,30 @@
 </ion-header>
 
 <ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="schedule">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Schedule</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="speakers">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Speakers</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="map">
+        <ion-icon name="map"></ion-icon>
+        <ion-label>Map</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="about">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>About</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
   <p class="ion-margin"><strong>We propose these new courses : </strong></p>
 
   <ion-list>

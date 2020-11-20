@@ -8,5 +8,30 @@
 </ion-header>
 
 <ion-content>
+  <form #f="ngForm" (submit)="createNewCourse(f.value)">
+    <ion-item>
+      <ion-label position="floating">Intitulé</ion-label>
+      <ion-input ngModel type="text" name="intitule"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Author</ion-label>
+      <ion-input ngModel type="text" name="author"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Image</ion-label>
+      <ion-input ngModel type="text" name="image"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Keywords</ion-label>
+      <ion-input ngModel type="text" name="keywords"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="primary" type="submit">
+      Add
+      <ion-icon name="checkmark-outline"></ion-icon>
+    </ion-button>
+
+  </form>
+
 
 </ion-content>

@@ -44,4 +44,9 @@ export class ListCoursesService {
     let i = this.listCourses.indexOf(myCourse);
     this.listCourses.splice(i,1);
   }
+
+  addCourse(newCourse) {
+    newCourse.id = this.listCourses[this.listCourses.length - 1].id + 1;
+    this.listCourses.push(newCourse);
+  }
 }

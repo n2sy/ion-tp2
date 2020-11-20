@@ -35,4 +35,13 @@ export class ListCoursesService {
     //return [...this.listCourses]; spread operator
     return this.listCourses;
   }
+
+  getCourseById(id) : Course {
+    return this.listCourses.find( c => c.id == id);
+  }
+
+  deleteCourseService(myCourse) {
+    let i = this.listCourses.indexOf(myCourse);
+    this.listCourses.splice(i,1);
+  }
 }

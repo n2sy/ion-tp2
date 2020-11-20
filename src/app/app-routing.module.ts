@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'new-course',
+    path: 'add',
     loadChildren: () => import('./new-course/new-course.module').then( m => m.NewCoursePageModule)
   }
 ];
